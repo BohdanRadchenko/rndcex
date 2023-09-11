@@ -1,0 +1,29 @@
+:root {
+    /*light*/
+    --c-light-100: #fff;
+
+    /*dark*/
+    --c-dark-100: #000;
+    --c-dark-75: #181818;
+
+    /*gray*/
+    --c-gray-75: #D8D8D8;
+    --c-gray-50: #E0E0E0;
+    --c-gray-25: #F5F5F5;
+    --c-gray-10: #F8F8F8;
+
+    /*orange*/
+    --c-orange-75: #FF7900;
+
+    /*yellow*/
+    --c-yellow-75: #FFE600;
+
+    /*aqua*/
+    --c-aqua-75: #004F45;
+
+    /*green*/
+    --c-green-75: #96FF00;
+
+
+    --color-background: var(--c-gray-10);
+}
