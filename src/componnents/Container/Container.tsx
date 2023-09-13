@@ -1,15 +1,14 @@
-import * as React from 'react';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { ContainerStyled } from './styled';
 
 interface IContainerProps {
 	children: JSX.Element;
 }
 
-export const Container: FC<IContainerProps> = ({ children }) => {
+export const Container: FC<IContainerProps> = memo(({ children }) => {
 	return (
 		<ContainerStyled>
 			{children}
 		</ContainerStyled>
 	);
-};
+});

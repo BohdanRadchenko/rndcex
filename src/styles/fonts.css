@@ -1,37 +1,37 @@
-/*Grtsk ZETTA*/
+/*Grtsk PETA*/
 @font-face {
-    font-family: 'zetta';
-    src: local('Grtsk Zetta Regular'), local('Grtsk-Zetta-Regular'),
-    url('../assets/fonts/GrtskZetta-Regular/GrtskZetta-Regular.woff2') format('woff2'),
-    url('../assets/fonts/GrtskZetta-Regular/GrtskZetta-Regular.woff') format('woff'),
-    url('../assets/fonts/GrtskZetta-Regular/GrtskZetta-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Peta';
+    src: local('Grtsk Peta Italic'), local('Grtsk-Peta-Italic'),
+    url('../assets/fonts/GrtskPeta-Italic/GrtskPeta-Italic.woff2') format('woff2'),
+    url('../assets/fonts/GrtskPeta-Italic/GrtskPeta-Italic.woff') format('woff'),
+    url('../assets/fonts/GrtskPeta-Italic/GrtskPeta-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 
 @font-face {
-    font-family: 'zetta';
-    src: local('Grtsk Tera Regular'), local('Grtsk-Tera-Regular'),
-    url('../assets/fonts/GrtskTera-Regular/GrtskTera-Regular.woff2') format('woff2'),
-    url('../assets/fonts/GrtskTera-Regular/GrtskTera-Regular.woff') format('woff'),
-    url('../assets/fonts/GrtskTera-Regular/GrtskTera-Regular.ttf') format('truetype');
+    font-family: 'Peta';
+    src: local('Grtsk Peta Regular'), local('Grtsk-Peta-Regular'),
+    url('../assets/fonts/GrtskPeta-Regular/GrtskPeta-Regular.woff2') format('woff2'),
+    url('../assets/fonts/GrtskPeta-Regular/GrtskPeta-Regular.woff') format('woff'),
+    url('../assets/fonts/GrtskPeta-Regular/GrtskPeta-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 /*Grtsk TERA*/
 @font-face {
-    font-family: 'tera';
-    src: local('Grtsk Tera Medium'), local('Grtsk-Tera-Medium'),
-    url('../assets/fonts/GrtskTera-Medium/GrtskTera-Medium.woff2') format('woff2'),
-    url('../assets/fonts/GrtskTera-Medium/GrtskTera-Medium.woff') format('woff'),
-    url('../assets/fonts/GrtskTera-Medium/GrtskTera-Medium.ttf') format('truetype');
-    font-weight: 500;
+    font-family: 'Tera';
+    src: local('Grtsk Tera Bold'), local('Grtsk-Tera-Bold'),
+    url('../assets/fonts/GrtskTera-Bold/GrtskTera-Bold.woff2') format('woff2'),
+    url('../assets/fonts/GrtskTera-Bold/GrtskTera-Bold.woff') format('woff'),
+    url('../assets/fonts/GrtskTera-Bold/GrtskTera-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'tera';
+    font-family: 'Tera';
     src: local('Grtsk Tera Italic'), local('Grtsk-Tera-Italic'),
     url('../assets/fonts/GrtskTera-Italic/GrtskTera-Italic.woff2') format('woff2'),
     url('../assets/fonts/GrtskTera-Italic/GrtskTera-Italic.woff') format('woff'),
@@ -41,32 +41,32 @@
 }
 
 @font-face {
-    font-family: 'tera';
-    src: local('Grtsk Tera Bold'), local('Grtsk-Tera-Bold'),
-    url('../assets/fonts/GrtskTera-Bold/GrtskTera-Bold.woff2') format('woff2'),
-    url('../assets/fonts/GrtskTera-Bold/GrtskTera-Bold.woff') format('woff'),
-    url('../assets/fonts/GrtskTera-Bold/GrtskTera-Bold.ttf') format('truetype');
-    font-weight: 700;
+    font-family: 'Tera';
+    src: local('Grtsk Tera Medium'), local('Grtsk-Tera-Medium'),
+    url('../assets/fonts/GrtskTera-Medium/GrtskTera-Medium.woff2') format('woff2'),
+    url('../assets/fonts/GrtskTera-Medium/GrtskTera-Medium.woff') format('woff'),
+    url('../assets/fonts/GrtskTera-Medium/GrtskTera-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
 }
 
-/*Grtsk PETA*/
 @font-face {
-    font-family: 'peta';
-    src: local('Grtsk Peta Regular'), local('Grtsk-Peta-Regular'),
-    url('../assets/fonts/GrtskPeta-Regular/GrtskPeta-Regular.woff2') format('woff2'),
-    url('../assets/fonts/GrtskPeta-Regular/GrtskPeta-Regular.woff') format('woff'),
-    url('../assets/fonts/GrtskPeta-Regular/GrtskPeta-Regular.ttf') format('truetype');
+    font-family: 'Tera';
+    src: local('Grtsk Tera Regular'), local('Grtsk-Tera-Regular'),
+    url('../assets/fonts/GrtskTera-Regular/GrtskTera-Regular.woff2') format('woff2'),
+    url('../assets/fonts/GrtskTera-Regular/GrtskTera-Regular.woff') format('woff'),
+    url('../assets/fonts/GrtskTera-Regular/GrtskTera-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
+/*Grtsk ZETTA*/
 @font-face {
-    font-family: 'peta';
-    src: local('Grtsk Peta Italic'), local('Grtsk-Peta-Italic'),
-    url('../assets/fonts/GrtskPeta-Italic/GrtskPeta-Italic.woff2') format('woff2'),
-    url('../assets/fonts/GrtskPeta-Italic/GrtskPeta-Italic.woff') format('woff'),
-    url('../assets/fonts/GrtskPeta-Italic/GrtskPeta-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+    font-family: 'Zetta';
+    src: local('Grtsk Zetta Regular'), local('Grtsk-Zetta-Regular'),
+    url('../assets/fonts/GrtskZetta-Regular/GrtskZetta-Regular.woff2') format('woff2'),
+    url('../assets/fonts/GrtskZetta-Regular/GrtskZetta-Regular.woff') format('woff'),
+    url('../assets/fonts/GrtskZetta-Regular/GrtskZetta-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }

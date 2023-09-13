@@ -23,7 +23,8 @@ module.exports = {
 			alias: {
 				extensions: ['.js', '.ts', '.scss', '.d.ts'],
 				map: [
-					['@/icons', './src/icons'],
+					['@/icons', './src/assets/icons'],
+					['@/images', './src/assets/icons'],
 					['@/assets', './src/assets'],
 					['@/components', './src/components'],
 					['@/modules', './src/modules'],

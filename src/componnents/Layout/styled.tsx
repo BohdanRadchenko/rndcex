@@ -1,19 +1,33 @@
-import styled from 'styled-components';
+import { ELogoColorSchema } from '@/componnents/Logo';
+import { ILogoProps } from '@/componnents/Logo/Logo';
+import { styled } from '@mui/material/styles';
+/**
+ * @deprecated
+ */
+import styledDep from 'styled-components';
 
-export const LayoutStyled = styled.div`
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--color-background);
+interface ILayoutSectionStyledProps extends Pick<ILogoProps, 'colorSchema'> {
+}
+
+export const LayoutStyled = styled('div')<ILayoutSectionStyledProps>(({ colorSchema, theme: { extendPalette } }) => ({
+	position: 'relative',
+	width: '100%',
+	minHeight: '100vh',
+	display: 'flex',
+	flexDirection: 'column',
+	flexGrow: 1,
+	backgroundColor: colorSchema === ELogoColorSchema.LIGHT ? extendPalette.backgroundColorLight : extendPalette.backgroundColorBlack
+}));
+
+export const LayoutSectionStyled = styledDep.section`
+  flex-grow: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  justify-content: center;
 `;
 
-export const LayoutSectionStyled = styled.section`
-  flex-grow: 1;
-`;
-
-export const LogoWrapper = styled.div`
-	
+export const LogoWrapper = styledDep.div`
+  line-height: 1;
+  margin: 0 0 80px;
 `;

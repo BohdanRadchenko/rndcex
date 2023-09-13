@@ -1,3 +1,3 @@
-export const enum LogoColor {
-	BLACK, WHITE, COLOR
+export const enum ELogoColorSchema {
+	LIGHT, DARK, COLOR
 }

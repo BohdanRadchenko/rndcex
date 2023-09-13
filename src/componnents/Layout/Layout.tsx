@@ -1,13 +1,12 @@
 import { Container } from '@/componnents/Container';
 import { LayoutStyled } from '@/componnents/Layout/styled';
-import * as React from 'react';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 export interface ILayoutProps {
-	children: JSX.Element;
+	children: JSX.Element | JSX.Element[];
 }
 
-export const Layout: FC<ILayoutProps> = ({ children }) => {
+export const Layout: FC<ILayoutProps> = memo(({ children }) => {
 	return (
 		<LayoutStyled>
 			<Container>
@@ -15,4 +14,4 @@ export const Layout: FC<ILayoutProps> = ({ children }) => {
 			</Container>
 		</LayoutStyled>
 	);
-};
+});

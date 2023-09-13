@@ -10,7 +10,7 @@
     --c-gray-75: #D8D8D8;
     --c-gray-50: #E0E0E0;
     --c-gray-25: #F5F5F5;
-    --c-gray-10: #F8F8F8;
+    --c-gray-10: #FBFBFB;
 
     /*orange*/
     --c-orange-75: #FF7900;
@@ -26,4 +26,15 @@
 
 
     --color-background: var(--c-gray-10);
+
+    /*Typography*/
+    --color-typography-primary: var(--c-dark-75);
+    --color-typography-secondary: var(--c-gray-50);
+    --color-typography-accent: var(--c-green-75);
+    --color-typography-orange: var(--c-orange-75);
+    --color-typography-white: var(--c-light-100);
+
+    /*Card*/
+    --color-card-background: var(--c-light-100);
+    --color-card-border: var(--c-gray-75);
 }

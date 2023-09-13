@@ -1,17 +1,24 @@
-import { LogoIcon } from '@/icons';
-import * as React from 'react';
-import { FC } from 'react';
-import { LogoColor } from './types';
+import { ReactComponent as LogoIcon } from '@/icons/Logo.svg';
+import { FC, memo } from 'react';
+import { ELogoColorSchema } from './types';
 
 export interface ILogoProps {
-	color?: LogoColor;
+	colorSchema?: ELogoColorSchema;
 }
 
-export const Logo: FC<ILogoProps> = ({ color = LogoColor.BLACK }) => {
-	return (
-		<>
-			<LogoIcon/>
-			{color}
-		</>
-	);
+const getColorByType = (colorSchema: ELogoColorSchema) => {
+	switch (colorSchema) {
+		case ELogoColorSchema.LIGHT:
+			return '#181818';
+		case ELogoColorSchema.DARK:
+			return '#fff';
+		default:
+			return '#000';
+	}
 };
+
+export const Logo: FC<ILogoProps> = memo(({ colorSchema = ELogoColorSchema.LIGHT }) => {
+	return (
+		<LogoIcon fill={getColorByType(colorSchema)}/>
+	);
+});
