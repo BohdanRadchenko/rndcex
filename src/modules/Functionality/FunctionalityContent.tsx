@@ -1,8 +1,9 @@
 import { BorderGradient } from '@/componnents/BorderGradient';
-import { IFunctionalityCardProps } from '@/modules/Functionality/FunctionalityCard';
-import { ContentWrapper, ListItem } from '@/modules/Functionality/styled';
+import { ListItem } from '@/componnents/ListItem';
 import { Box, Stack, Typography } from '@mui/material';
 import { FC, memo } from 'react';
+import { IFunctionalityCardProps } from './FunctionalityCard';
+import { ContentWrapper } from './styled';
 
 interface IFunctionalityContentProps extends Pick<IFunctionalityCardProps, 'content'> {
 }
@@ -22,7 +23,6 @@ export const FunctionalityContent: FC<IFunctionalityContentProps> = memo(({ cont
 									fontFamily: 'Zetta',
 									fontSize: 30,
 									textTransform: 'uppercase',
-									mb: 1,
 								}}
 							>
 								{title}&#58;

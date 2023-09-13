@@ -38,11 +38,10 @@ export const Development = memo(() => {
 							spacing={3}
 							sx={{ p: 2 }}
 						>
-							<BorderGradient>
+							<BorderGradient space={1.5}>
 								<Typography
 									variant="body1"
 									component="pre"
-									mb={1.5}
 									fontSize={26}
 								>
 									{title}

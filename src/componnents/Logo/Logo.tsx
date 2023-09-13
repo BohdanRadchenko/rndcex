@@ -1,23 +1,22 @@
+import { ELayoutColorSchema, ILayoutProps } from '@/componnents/Layout';
 import { ReactComponent as LogoIcon } from '@/icons/Logo.svg';
 import { FC, memo } from 'react';
-import { ELogoColorSchema } from './types';
 
-export interface ILogoProps {
-	colorSchema?: ELogoColorSchema;
+export interface ILogoProps extends Pick<ILayoutProps, 'colorSchema'> {
 }
 
-const getColorByType = (colorSchema: ELogoColorSchema) => {
+const getColorByType = (colorSchema: ELayoutColorSchema) => {
 	switch (colorSchema) {
-		case ELogoColorSchema.LIGHT:
+		case ELayoutColorSchema.LIGHT:
 			return '#181818';
-		case ELogoColorSchema.DARK:
+		case ELayoutColorSchema.DARK:
 			return '#fff';
 		default:
 			return '#000';
 	}
 };
 
-export const Logo: FC<ILogoProps> = memo(({ colorSchema = ELogoColorSchema.LIGHT }) => {
+export const Logo: FC<ILogoProps> = memo(({ colorSchema = ELayoutColorSchema.LIGHT }) => {
 	return (
 		<LogoIcon fill={getColorByType(colorSchema)}/>
 	);

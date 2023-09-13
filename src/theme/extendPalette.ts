@@ -17,6 +17,9 @@ const orange75 = '#FF7900';
 // yellow
 const yellow75 = '#FFE600';
 
+// brown
+const brown75 = '#3E1D00';
+
 // aqua
 const aqua75 = '#004F45';
 
@@ -48,6 +51,7 @@ export interface IExtendPalette {
 	gray10: string;
 	orange75: string;
 	yellow75: string;
+	brown75: string;
 	aqua75: string;
 	green75: string;
 	//
@@ -68,6 +72,7 @@ export const extendPalette: IExtendPalette = {
 	gray10,
 	orange75,
 	yellow75,
+	brown75,
 	aqua75,
 	green75,
 	//

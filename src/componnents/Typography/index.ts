@@ -1,0 +1,1 @@
+export { TypographyTitleWhite } from './TypographyTitleWhite';

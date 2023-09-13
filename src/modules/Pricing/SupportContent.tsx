@@ -1,15 +1,14 @@
 import { BorderGradient } from '@/componnents/BorderGradient';
-import { CardBackground } from '@/componnents/CardBackground';
 import { supportCosts } from '@/modules/Pricing/content';
 import { PriceShape } from '@/modules/Pricing/PriceShape';
-import { SupportBodyText, SupportSubtitle, SupportTitle } from '@/modules/Pricing/styled';
+import { Card, SupportBodyText, SupportSubtitle, SupportTitle } from '@/modules/Pricing/styled';
 import { extendPalette } from '@/theme/extendPalette';
 import { Stack } from '@mui/material';
 import { memo } from 'react';
 
 export const SupportContent = memo(() => {
 	return (
-		<CardBackground>
+		<Card>
 			<Stack spacing={3}>
 				<SupportTitle>Support Costs</SupportTitle>
 				<Stack
@@ -22,7 +21,10 @@ export const SupportContent = memo(() => {
 							spacing={1.6}
 							flexBasis="50%"
 						>
-							<BorderGradient color={extendPalette.green75}>
+							<BorderGradient
+								color={extendPalette.green75}
+								space={1.6}
+							>
 								<SupportSubtitle>{title}&#58;</SupportSubtitle>
 							</BorderGradient>
 							<SupportBodyText>{subtitle}</SupportBodyText>
@@ -34,6 +36,6 @@ export const SupportContent = memo(() => {
 					))}
 				</Stack>
 			</Stack>
-		</CardBackground>
+		</Card>
 	);
 });

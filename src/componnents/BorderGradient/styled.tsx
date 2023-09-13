@@ -8,7 +8,7 @@ interface IBorderGradientStyleProps extends Pick<IBorderGradientProps, 'space'> 
 
 export const BorderGradientStyle = styled(Box)<IBorderGradientStyleProps>(({ theme, gradient, space }) => ({
 	position: 'relative',
-	marginBottom: theme.spacing(space),
+	paddingBottom: theme.spacing(space),
 	'&::after': {
 		content: '" "',
 		width: '100%',

@@ -1,17 +1,22 @@
-import { Container } from '@/componnents/Container';
+import { ELayoutColorSchema } from '@/componnents/Layout';
 import { LayoutStyled } from '@/componnents/Layout/styled';
-import { FC, memo } from 'react';
+import { FC, memo, ReactElement } from 'react';
 
 export interface ILayoutProps {
-	children: JSX.Element | JSX.Element[];
+	children: ReactElement | ReactElement[];
+	colorSchema?: ELayoutColorSchema;
+	backgroundComponent?: ReactElement;
 }
 
-export const Layout: FC<ILayoutProps> = memo(({ children }) => {
+export const Layout: FC<ILayoutProps> = memo(({
+																								children,
+																								backgroundComponent: BackgroundComponent = null,
+																								colorSchema = ELayoutColorSchema.LIGHT
+																							}) => {
 	return (
-		<LayoutStyled>
-			<Container>
-				{children}
-			</Container>
+		<LayoutStyled colorSchema={colorSchema}>
+			{!!BackgroundComponent && <BackgroundComponent/>}
+			{children}
 		</LayoutStyled>
 	);
 });

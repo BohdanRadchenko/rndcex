@@ -1,4 +1,4 @@
-import { ELogoColorSchema } from '@/componnents/Logo';
+import { ELayoutColorSchema } from '@/componnents/Layout';
 import { ILogoProps } from '@/componnents/Logo/Logo';
 import { styled } from '@mui/material/styles';
 /**
@@ -16,7 +16,7 @@ export const LayoutStyled = styled('div')<ILayoutSectionStyledProps>(({ colorSch
 	display: 'flex',
 	flexDirection: 'column',
 	flexGrow: 1,
-	backgroundColor: colorSchema === ELogoColorSchema.LIGHT ? extendPalette.backgroundColorLight : extendPalette.backgroundColorBlack
+	backgroundColor: colorSchema === ELayoutColorSchema.LIGHT ? extendPalette.backgroundColorLight : extendPalette.backgroundColorBlack
 }));
 
 export const LayoutSectionStyled = styledDep.section`

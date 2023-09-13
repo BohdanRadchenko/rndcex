@@ -16,22 +16,6 @@ export const ContentWrapper = styled('div')({
 	gridTemplateColumns: 'repeat(2, 1fr)',
 });
 
-export const ListItem = styled(Box)(({ theme }) => ({
-	paddingLeft: 26,
-	position: 'relative',
-	'&::before': {
-		content: '" "',
-		display: 'block',
-		width: 3,
-		height: 3,
-		backgroundColor: theme.extendPalette.dark75,
-		position: 'absolute',
-		top: '50%',
-		left: '14px',
-		transform: 'translate(-50%, -50%)'
-	}
-}));
-
 export const BackgroundHolderStyle = styled(Box)({
 	position: 'absolute',
 	right: 0,

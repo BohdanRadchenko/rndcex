@@ -1,8 +1,13 @@
-import { Typography, TypographyProps } from '@mui/material';
+import { CardBackground } from '@/componnents/CardBackground';
+import { TypographyTitleWhite } from '@/componnents/Typography';
+import { Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-export const HeadTitleText = styled((props: TypographyProps) =>
-	<Typography {...props} variant="title"/>)(({ theme: { palette: { typography } } }) => ({
+export const Card = styled(CardBackground)(({ theme: { extendPalette } }) => ({
+	backgroundImage: `radial-gradient(89% 128% at 100% 100%, ${extendPalette.brown75} 0%, #181818 100%)`,
+}));
+
+export const HeadTitleText = styled(TypographyTitleWhite)(({ theme: { palette: { typography } } }) => ({
 	color: typography.white,
 }));
 
@@ -40,7 +45,6 @@ export const SupportSubtitle = styled(SupportTitle)(({ theme: { palette: { typog
 	fontSize: 30,
 	fontFamily: 'Zetta',
 	textTransform: 'uppercase',
-	marginBottom: 16
 }));
 
 export const SupportBodyText = styled(SupportSubtitle)(({ theme: { palette: { typography } } }) => ({

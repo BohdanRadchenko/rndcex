@@ -1,5 +1,4 @@
-import { LayoutLogo } from '@/componnents/Layout';
-import { ELogoColorSchema } from '@/componnents/Logo';
+import { BackgroundPricingSection, ELayoutColorSchema, LayoutLogo } from '@/componnents/Layout';
 import { HeadSubtitleText, HeadTitleText } from '@/modules/Pricing/styled';
 import { Stack } from '@mui/material';
 import { memo } from 'react';
@@ -8,7 +7,10 @@ import { SupportContent } from './SupportContent';
 
 export const Pricing = memo(() => {
 	return (
-		<LayoutLogo colorSchema={ELogoColorSchema.DARK}>
+		<LayoutLogo
+			colorSchema={ELayoutColorSchema.DARK}
+			backgroundComponent={BackgroundPricingSection}
+		>
 			<Stack
 				spacing={5}
 				flexGrow={1}
