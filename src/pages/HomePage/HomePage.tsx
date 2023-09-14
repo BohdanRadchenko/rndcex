@@ -26,7 +26,7 @@ export const HomePage = memo(() => {
 			<FunctionalityModule/>
 			<DevelopmentModule/>
 			<IntegrationsModule/>
-			<BenchmarkingModule/>
+			{/*<BenchmarkingModule/>*/}
 			<WorksModule/>
 			<PricingModule/>
 		</>
