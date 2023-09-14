@@ -16,14 +16,18 @@ export const ManagementCard = memo(() => {
 				<Stack
 					gap={5}
 					direction="row"
-					// flexWrap="wrap"
+					flexWrap="wrap"
 				>
 					{managersData.map(({ title, subtitle }) => (
 						<Stack
 							key={title}
 							spacing={1.6}
-							flexGrow={1}
+							flex={1}
+							// flexGrow={1}
+							minWidth="40%"
+							maxWidth="50%"
 							// flexBasis="47%"
+							// flex={'1 1 auto'}
 						>
 							<BorderGradient
 								color={extendPalette.green75}
