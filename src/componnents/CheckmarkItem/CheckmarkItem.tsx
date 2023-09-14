@@ -1,7 +1,6 @@
-import { CheckmarkText } from '@/componnents/CheckmarkItem/styled';
-import { ReactComponent as CheckmarkIcon } from '@/icons/Checkmark.svg';
 import { Stack, TypographyProps } from '@mui/material';
 import { FC, memo } from 'react';
+import { CheckmarkIcon, CheckmarkText } from './styled';
 
 interface ICheckmarkItemProps extends TypographyProps {
 	spacing?: number;

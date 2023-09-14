@@ -1,5 +1,5 @@
 import { BackgroundPricingSection, ELayoutColorSchema, LayoutLogo } from '@/componnents/Layout';
-import { HeadSubtitleText, HeadTitleText } from '@/modules/Pricing/styled';
+import { TypographySubtitleWhite, TypographyTitleWhite } from '@/componnents/Typography';
 import { Stack } from '@mui/material';
 import { memo } from 'react';
 import { PricingContent } from './PricingContent';
@@ -17,12 +17,12 @@ export const Pricing = memo(() => {
 				pt={8}
 			>
 				<Stack spacing={3}>
-					<HeadTitleText>
+					<TypographyTitleWhite>
 						Pricing
-					</HeadTitleText>
-					<HeadSubtitleText>
+					</TypographyTitleWhite>
+					<TypographySubtitleWhite>
 						Price include complete transfer of the code base
-					</HeadSubtitleText>
+					</TypographySubtitleWhite>
 				</Stack>
 
 				<Stack spacing={3}>

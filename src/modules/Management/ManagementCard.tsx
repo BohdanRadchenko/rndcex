@@ -23,11 +23,8 @@ export const ManagementCard = memo(() => {
 							key={title}
 							spacing={1.6}
 							flex={1}
-							// flexGrow={1}
 							minWidth="40%"
 							maxWidth="50%"
-							// flexBasis="47%"
-							// flex={'1 1 auto'}
 						>
 							<BorderGradient
 								color={extendPalette.green75}

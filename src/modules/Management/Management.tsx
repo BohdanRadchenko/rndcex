@@ -1,4 +1,4 @@
-import { BackgroundManagementSection, ELayoutColorSchema, LayoutLogo } from '@/componnents/Layout';
+import { BackgroundProductsSection, ELayoutColorSchema, LayoutLogo } from '@/componnents/Layout';
 import { Stack } from '@mui/material';
 import { memo } from 'react';
 import { ManagementCard } from './ManagementCard';
@@ -8,7 +8,7 @@ export const Management = memo(() => {
 	return (
 		<LayoutLogo
 			colorSchema={ELayoutColorSchema.DARK}
-			backgroundComponent={BackgroundManagementSection}
+			backgroundComponent={BackgroundProductsSection}
 		>
 			<Stack
 				spacing={5}

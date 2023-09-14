@@ -3,7 +3,7 @@ import { LayoutStyled } from '@/componnents/Layout/styled';
 import { FC, memo, ReactElement } from 'react';
 
 export interface ILayoutProps {
-	children: ReactElement | ReactElement[];
+	children?: ReactElement | ReactElement[];
 	colorSchema?: ELayoutColorSchema;
 	backgroundComponent?: ReactElement;
 }

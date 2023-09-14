@@ -32,7 +32,7 @@ const backgroundColorBlack = dark100;
 const backgroundMain = backgroundColorLight;
 
 const cardBorderColorPrimary = gray75;
-const cardBorderColorSecondary = `#${light100}40`;
+const cardBorderColorSecondary = `${light100}40`;
 
 // typography
 const typographyWhite = light100;

@@ -1,5 +1,6 @@
 import { ELayoutColorSchema, ILayoutProps } from '@/componnents/Layout';
 import { ReactComponent as LogoIcon } from '@/icons/Logo.svg';
+import { ReactComponent as LogoColorIcon } from '@/icons/LogoColor.svg';
 import { FC, memo } from 'react';
 
 export interface ILogoProps extends Pick<ILayoutProps, 'colorSchema'> {
@@ -12,12 +13,13 @@ const getColorByType = (colorSchema: ELayoutColorSchema) => {
 		case ELayoutColorSchema.DARK:
 			return '#fff';
 		default:
-			return '#000';
+			return 'inherit';
 	}
 };
 
 export const Logo: FC<ILogoProps> = memo(({ colorSchema = ELayoutColorSchema.LIGHT }) => {
+	const Logo = colorSchema === ELayoutColorSchema.COLOR ? LogoColorIcon : LogoIcon;
 	return (
-		<LogoIcon fill={getColorByType(colorSchema)}/>
+		<Logo fill={getColorByType(colorSchema)}/>
 	);
 });

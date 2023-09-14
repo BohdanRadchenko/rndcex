@@ -16,4 +16,6 @@ export const BackgroundImageStyled = styled('img')({
 	position: 'absolute',
 	bottom: 50,
 	right: 0,
+	// zIndex: 0,
+	zIndex: -1,
 });

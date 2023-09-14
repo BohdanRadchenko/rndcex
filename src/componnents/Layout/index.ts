@@ -7,5 +7,10 @@ export {
 	BackgroundWorkSection,
 	BackgroundPricingSection,
 	BackgroundProductsSection,
-	BackgroundManagementSection
+	BackgroundManagementSection,
+	BackgroundSecuritySection,
+	BackgroundCryptoExchangeSection,
+	BackgroundSolutionServicesSection,
+	BackgroundHeadSection,
+	BaseBackground
 } from './backgrounds';
