@@ -1,13 +1,14 @@
-import { routes } from '@/routes';
-import { useRoutes } from 'react-router-dom';
+import { LazyLoader } from '@/componnents/LazyLoader';
+import { lazy } from 'react';
 import { AppStyled } from './styled';
 
+const HomePage = LazyLoader(lazy(() => import(/* webpackChunkName: 'Home page' */ '../../pages/HomePage')));
+
 export const App = () => {
-	const element = useRoutes(routes);
 
 	return (
 		<AppStyled className="main">
-			{element}
+			<HomePage/>
 		</AppStyled>
 	);
 };
