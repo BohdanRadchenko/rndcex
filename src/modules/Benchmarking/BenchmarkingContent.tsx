@@ -8,8 +8,11 @@ export const BenchmarkingContent = memo(() => {
 	return (
 		<Stack spacing={5}>
 			{benchmarkingData.map(({ title, values }) => (
-				<Stack spacing={3}>
-					<Title key={title}>{title}</Title>
+				<Stack
+					spacing={3}
+					key={title}
+				>
+					<Title>{title}</Title>
 					<BenchmarkingTable values={values}/>
 				</Stack>
 			))}

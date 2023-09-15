@@ -3,11 +3,10 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
 import { FC, memo } from 'react';
 import { IBenchmarkingData } from './content';
 import { createTableHead } from './helpers';
-import { Card, TableCellHead, TableCellRow } from './styled';
+import { Card, TableCellHead, TableCellRow, TableRow } from './styled';
 
 interface IBenchmarkingTableProps extends Pick<IBenchmarkingData, 'values'> {
 }
@@ -19,7 +18,10 @@ export const BenchmarkingTable: FC<IBenchmarkingTableProps> = memo(({ values }) 
 				<TableHead>
 					<TableRow>
 						{createTableHead(values).map(({ label }) => (
-							<TableCellHead align="center">{label}</TableCellHead>
+							<TableCellHead
+								align="center"
+								key={label}
+							>{label}</TableCellHead>
 						))}
 					</TableRow>
 				</TableHead>
@@ -27,17 +29,17 @@ export const BenchmarkingTable: FC<IBenchmarkingTableProps> = memo(({ values }) 
 					{values.map((row) => (
 						<TableRow
 							key={row.id}
-							sx={{
-								['&:last-child td, &:last-child th']: { border: 0 },
-								['& > td:first-child p']: {
-									fontSize: 24,
-									fontFamily: 'Peta',
-								}
-							}}
+							highlight={!!row.current}
 						>
 							{createTableHead(values).map(({ key }) => (
-								<TableCellRow align="center">
-									<BenchmarkingTableValue value={row[key]}/>
+								<TableCellRow
+									align="center"
+									key={key}
+								>
+									<BenchmarkingTableValue
+										value={row[key]}
+										renderKey={key}
+									/>
 								</TableCellRow>
 							))}
 						</TableRow>
@@ -45,5 +47,6 @@ export const BenchmarkingTable: FC<IBenchmarkingTableProps> = memo(({ values }) 
 				</TableBody>
 			</Table>
 		</TableContainer>
-	);
+	)
+		;
 });

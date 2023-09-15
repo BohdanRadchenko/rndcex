@@ -54,7 +54,7 @@ const serviceB2b = {
 };
 
 const costsRnd = {
-	id: 31,
+	id: 13,
 	current: true,
 	company: 'R’N’D CEX',
 	novolumefees: true,
@@ -67,7 +67,7 @@ const costsRnd = {
 };
 
 const costsModulus = {
-	id: 2,
+	id: 12,
 	current: false,
 	company: 'Modulus',
 	novolumefees: true,
@@ -80,7 +80,7 @@ const costsModulus = {
 };
 
 const costsSoft = {
-	id: 1,
+	id: 11,
 	company: 'Soft-FX',
 	current: false,
 	novolumefees: true,
@@ -93,7 +93,7 @@ const costsSoft = {
 };
 
 const costsB2b = {
-	id: 0,
+	id: 10,
 	company: 'B2B Broker',
 	current: false,
 	novolumefees: false,

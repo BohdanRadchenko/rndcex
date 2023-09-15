@@ -1,3 +1,13 @@
+import { ReactComponent as B2BBrokerIcon } from '@/icons/B2BBrokerIcon.svg';
+import { ReactComponent as ModulusIcon } from '@/icons/ModulusIcon.svg';
+import { ReactComponent as RndIcon } from '@/icons/RndIcon.svg';
+import { ReactComponent as SoftFxIcon } from '@/icons/SoftFxIcon.svg';
+
+console.log('RndIcon', RndIcon);
+console.log('B2BBrokerIcon', B2BBrokerIcon);
+console.log('ModulusIcon', ModulusIcon);
+console.log('SoftFxIcon', SoftFxIcon);
+
 type TableValue = Record<[k: string], string>;
 
 type TableHead = { key: string, label: string };
@@ -38,3 +48,13 @@ export const createTableHead = (values: TableValue[]): TableHead[] => {
 		}, [] as TableHead[]);
 };
 
+const companyIconsMap = new Map<string, unknown>([
+	['R’N’D CEX', RndIcon],
+	['Modulus', ModulusIcon],
+	['Soft-FX', SoftFxIcon],
+	['B2B Broker', B2BBrokerIcon],
+]);
+
+export const getIconFromCompanyName = (companyName: string) => {
+	return companyIconsMap.get(companyName) || null;
+};
