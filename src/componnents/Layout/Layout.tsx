@@ -1,6 +1,7 @@
 import { ELayoutColorSchema } from '@/componnents/Layout';
 import { LayoutStyled } from '@/componnents/Layout/styled';
 import { FC, memo, ReactElement } from 'react';
+import { BackgroundBaseLight } from './backgrounds';
 
 export interface ILayoutProps {
 	children?: ReactElement | ReactElement[];
@@ -13,9 +14,13 @@ export const Layout: FC<ILayoutProps> = memo(({
 																								backgroundComponent: BackgroundComponent = null,
 																								colorSchema = ELayoutColorSchema.LIGHT
 																							}) => {
+	const Background = !BackgroundComponent && colorSchema === ELayoutColorSchema.LIGHT
+		? BackgroundBaseLight
+		: BackgroundComponent;
+
 	return (
 		<LayoutStyled colorSchema={colorSchema}>
-			{!!BackgroundComponent && <BackgroundComponent/>}
+			{!!Background && <Background/>}
 			{children}
 		</LayoutStyled>
 	);

@@ -4,6 +4,8 @@ import background21 from '@/images/background21.png';
 import background211 from '@/images/background211.png';
 import background3 from '@/images/background3.png';
 import background31 from '@/images/background31.png';
+import background42 from '@/images/background42.png';
+import background51 from '@/images/background51.png';
 import background6 from '@/images/background6.png';
 import background61 from '@/images/background61.png';
 import { styled } from '@mui/material/styles';
@@ -19,6 +21,10 @@ export const BaseBackground = styled('div')(({ theme: { extendPalette } }) => ({
 	zIndex: 0,
 	backgroundColor: '#000',
 	backgroundImage: `linear-gradient(318.17deg, ${extendPalette.brown75} 14.17%, ${extendPalette.dark100} 114%)`,
+}));
+
+export const BackgroundBaseLight = styled(BaseBackground)(({ theme: { extendPalette } }) => ({
+	background: `linear-gradient(136deg, ${extendPalette.orange75}00 50%, ${extendPalette.orange75}0C 100%), ${extendPalette.light90}`
 }));
 
 export const BackgroundWorkSection = styled(BaseBackground)(({ theme: { extendPalette } }) => ({
@@ -59,4 +65,14 @@ export const BackgroundSolutionServicesSection = styled(BaseBackground)(({ theme
 export const BackgroundHeadSection = styled(BaseBackground)(({ theme: { extendPalette } }) => ({
 	backgroundImage:
 		`url(${background11}), radial-gradient(155% 155% at 9% 141%, ${extendPalette.aqua75} 0%, ${extendPalette.dark100} 100%)`,
+}));
+
+export const BackgroundChooseSection = styled(BaseBackground)(({ theme: { extendPalette } }) => ({
+	backgroundImage:
+		`url(${background51}), radial-gradient(50% 128% at 50% 50%, ${extendPalette.aqua85} 0%, ${extendPalette.dark100} 100%)`,
+}));
+
+export const BackgroundAdminPanelSection = styled(BaseBackground)(({ theme: { extendPalette } }) => ({
+	backgroundImage:
+		`url(${background42}), radial-gradient(79% 201% at 78% 50%, ${extendPalette.aqua85} 0%, ${extendPalette.dark100} 100%)`,
 }));

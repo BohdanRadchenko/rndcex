@@ -9,12 +9,19 @@ const headServicesNamedMap: Map<string, string> = new Map([
 	['listings', 'Unlimited Listings'],
 	['customization', 'Сustomization'],
 	['launch', '7 days Launch'],
+	['novolumefees', 'No Volume-based Fees'],
+	['noturnoverfees', 'No Turnover Fees'],
+	['transferfees', 'Code Transfer & Setup Fees'],
+	['setupfess', 'Setup Fees'],
+	['monthlyfees', 'Monthly Fees'],
+	['supportfees', 'Support Fees'],
+	['listingfees', 'Listing Fees'],
 ]);
 
 const namedMap = new Map([...new Set([...headServicesNamedMap].concat([...headServicesNamedMap]))]);
 
-const createTableHead = (values: TableValue[]): TableValue[] => {
-	return values
+export const createTableHead = (values: TableValue[]): TableHead[] => {
+	const obj = values
 		.reduce((acc, el) => {
 			Object.keys(el).forEach((key) => {
 				if (!namedMap.has(key.toString())) return;
@@ -22,12 +29,12 @@ const createTableHead = (values: TableValue[]): TableValue[] => {
 			});
 			return acc;
 		}, {} as TableValue);
-};
-
-export const tableHead = (values: TableValue[]): TableHead[] => {
-	const headTitles = createTableHead(values);
-	return [...headServicesNamedMap].map(([key]) => {
-		return { key, label: headTitles[key] };
-	});
+	return [...headServicesNamedMap]
+		.reduce((acc, [key]) => {
+			if (key in obj) {
+				acc = [...acc, { key, label: obj[key] }];
+			}
+			return acc;
+		}, [] as TableHead[]);
 };
 

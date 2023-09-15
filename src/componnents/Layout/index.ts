@@ -12,5 +12,7 @@ export {
 	BackgroundCryptoExchangeSection,
 	BackgroundSolutionServicesSection,
 	BackgroundHeadSection,
-	BaseBackground
+	BaseBackground,
+	BackgroundChooseSection,
+	BackgroundAdminPanelSection
 } from './backgrounds';

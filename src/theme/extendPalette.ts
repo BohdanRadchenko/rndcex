@@ -1,5 +1,6 @@
 // light
 const light100 = '#ffffff';
+const light90 = '#FBFBFB';
 
 // dark
 const dark100 = '#000000';
@@ -21,6 +22,7 @@ const yellow75 = '#FFE600';
 const brown75 = '#3E1D00';
 
 // aqua
+const aqua85 = '#003A33';
 const aqua75 = '#004F45';
 
 // green
@@ -41,18 +43,34 @@ const typographySecondary = gray50;
 const typographyOrange = orange75;
 const typographyAccent = green75;
 
+// checkbox
+const checkboxChecked = green75;
+const checkboxHover = aqua75;
+const checkboxDisabled = brown75;
+const checkboxUnchecked = orange75;
+
 export interface IExtendPalette {
+	//light
 	light100: string;
+	light90: string;
+	//dark
 	dark100: string;
 	dark75: string;
+	//gray
 	gray75: string;
 	gray50: string;
 	gray25: string;
 	gray10: string;
+	// orange
 	orange75: string;
+	// yellow
 	yellow75: string;
+	//brown
 	brown75: string;
+	// aqua
+	aqua85: string;
 	aqua75: string;
+	//green
 	green75: string;
 	//
 	backgroundColorLight: string,
@@ -60,20 +78,36 @@ export interface IExtendPalette {
 	backgroundMain: string;
 	cardBorderColorPrimary: string;
 	cardBorderColorSecondary: string;
+
+	//
+	checkboxChecked: string;
+	checkboxHover: string;
+	checkboxDisabled: string;
+	checkboxUnchecked: string;
 }
 
 export const extendPalette: IExtendPalette = {
+	//
 	light100,
+	light90,
+	//
 	dark100,
 	dark75,
+	//
 	gray75,
 	gray50,
 	gray25,
 	gray10,
+	//
 	orange75,
+	//
 	yellow75,
+	//
 	brown75,
+	//
+	aqua85,
 	aqua75,
+	//
 	green75,
 	//
 	backgroundColorLight,
@@ -81,6 +115,11 @@ export const extendPalette: IExtendPalette = {
 	backgroundMain,
 	cardBorderColorPrimary,
 	cardBorderColorSecondary,
+	//
+	checkboxChecked,
+	checkboxHover,
+	checkboxDisabled,
+	checkboxUnchecked,
 };
 
 export interface ITypographyColors {

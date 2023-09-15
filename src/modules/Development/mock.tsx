@@ -79,7 +79,7 @@ const db = {
 };
 
 const ma = {
-	title: 'Microservice\n Architecture',
+	title: 'Microservice\n ExchangeCore',
 	icons: [
 		{ name: 'Kafka', icon: KafkaIcon },
 		{ name: 'RabbitMQ', icon: RebbitMQIcon },
