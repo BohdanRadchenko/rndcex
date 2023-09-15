@@ -1,3 +1,4 @@
+import { muiCheckbox } from '@/theme/muiCheckbox';
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 import { CSSProperties } from 'react';
 import { extendPalette, IExtendPalette, ITypographyColors, typographyColors } from './extendPalette';
@@ -21,14 +22,18 @@ declare module '@mui/material/styles/createTheme' {
 declare module '@mui/material/styles' {
 	interface TypographyVariants {
 		title: CSSProperties;
+		title2: CSSProperties;
 		subtitle: CSSProperties;
+		subtitle2: CSSProperties;
 		body1: CSSProperties;
 		body2: CSSProperties;
 	}
 
 	interface TypographyVariantsOptions {
 		title?: CSSProperties;
+		title2?: CSSProperties;
 		subtitle?: CSSProperties;
+		subtitle2?: CSSProperties;
 		body1?: CSSProperties;
 		body2?: CSSProperties;
 	}
@@ -53,7 +58,9 @@ declare module '@mui/material/styles' {
 declare module '@mui/material/Typography' {
 	interface TypographyPropsVariantOverrides {
 		title: true;
+		title2: true;
 		subtitle: true;
+		subtitle2: true;
 		body1: true;
 		body2: true;
 	}
@@ -82,7 +89,8 @@ const theme = createTheme({
 				variant: 'body1',
 				color: typographyColors.primary,
 			},
-		}
+		},
+		MuiCheckbox: muiCheckbox,
 	},
 	spacing: (factor: number) => `${10 * factor}px`,
 	typography: {
@@ -92,9 +100,19 @@ const theme = createTheme({
 			fontSize: 80,
 			fontWeight: 700,
 		},
+		title2: {
+			fontFamily: 'Tera',
+			fontSize: 46,
+			fontWeight: 700,
+		},
 		subtitle: {
 			fontFamily: 'Peta',
 			fontSize: 30,
+			fontWeight: 400,
+		},
+		subtitle2: {
+			fontFamily: 'Tera',
+			fontSize: 26,
 			fontWeight: 400,
 		},
 		body1: {
