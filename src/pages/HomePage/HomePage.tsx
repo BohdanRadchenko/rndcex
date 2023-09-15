@@ -38,9 +38,11 @@ export const HomePage = memo(() => {
 			<FunctionalityModule/>
 
 			{/*6*/}
+			{/*TODO: remove bg img*/}
 			<ExchangeCoreModule/>
 
 			{/*7*/}
+			{/*TODO: remove bg img*/}
 			<ArchitectureModule/>
 
 			{/*8*/}

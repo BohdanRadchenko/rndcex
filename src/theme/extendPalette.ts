@@ -49,6 +49,10 @@ const checkboxHover = aqua75;
 const checkboxDisabled = brown75;
 const checkboxUnchecked = orange75;
 
+// table
+const tableBackgroundOdd = '#FFFFFF12';
+const tableBackgroundCurrent = '#FFFFFF26';
+
 export interface IExtendPalette {
 	//light
 	light100: string;
@@ -84,6 +88,10 @@ export interface IExtendPalette {
 	checkboxHover: string;
 	checkboxDisabled: string;
 	checkboxUnchecked: string;
+
+	//
+	tableBackgroundOdd: string;
+	tableBackgroundCurrent: string;
 }
 
 export const extendPalette: IExtendPalette = {
@@ -120,6 +128,9 @@ export const extendPalette: IExtendPalette = {
 	checkboxHover,
 	checkboxDisabled,
 	checkboxUnchecked,
+	//
+	tableBackgroundOdd,
+	tableBackgroundCurrent,
 };
 
 export interface ITypographyColors {

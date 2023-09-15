@@ -1,7 +1,11 @@
 import { CardBackground } from '@/componnents/CardBackground';
 import { TypographyTitleWhite } from '@/componnents/Typography';
-import { TableCell as MuiTableCell, Typography, TypographyProps } from '@mui/material';
+import { TableCell as MuiTableCell, TableRow as MuiTableRow, Typography, TypographyProps } from '@mui/material';
 import { styled } from '@mui/material/styles';
+
+interface ITableRowProps {
+	highlight?: boolean;
+}
 
 export const Card = styled(CardBackground)(({ theme: { extendPalette } }) => ({
 	padding: 0,
@@ -20,8 +24,8 @@ export const TableCellHead = styled(MuiTableCell)(({ theme: { spacing, extendPal
 	fontFamily: 'Zetta',
 	color: extendPalette.light100,
 	textTransform: 'uppercase',
-	'&:nth-child(odd)': {
-		backgroundColor: `${extendPalette.light100}12`,
+	'&:nth-of-type(odd)': {
+		backgroundColor: `${extendPalette.tableBackgroundOdd}`,
 	}
 }));
 
@@ -29,6 +33,15 @@ export const TableCellRow = styled(TableCellHead)({
 	fontFamily: 'Peta',
 	textTransform: 'unset',
 });
+
+export const TableRow = styled(MuiTableRow)<ITableRowProps>(({ highlight, theme: { extendPalette } }) => ({
+	backgroundColor: highlight ? `${extendPalette.tableBackgroundCurrent}` : 'transparent',
+	['&:last-child td, &:last-child th']: { border: 0 },
+	['& > td:first-of-type p']: {
+		fontSize: 24,
+		fontFamily: 'Peta',
+	}
+}));
 
 export const TableRowText = styled((props: TypographyProps) =>
 	<Typography {...props} variant="body1"/>)(({ theme: { palette: { typography } } }) => ({

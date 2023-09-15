@@ -8,13 +8,14 @@ export interface ICheckboxProps extends CheckboxProps {
 	lock?: boolean;
 }
 
-export const Checkbox: FC<ICheckboxProps> = memo(({ value, lock = false }) => {
+export const Checkbox: FC<ICheckboxProps> = memo(({ value, lock = false, ...props }) => {
 	return (
 		<CheckboxStyled
 			icon={<CheckboxRectIcon/>}
 			checkedIcon={<CheckboxIcon/>}
 			checked={value}
-			lock={lock}
+			pointerEvents={lock ? 'none' : 'unset'}
+			{...props}
 		/>
 	);
 });
