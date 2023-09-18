@@ -6,11 +6,16 @@ export const ManagementTitle = memo(() => {
 	return (
 		<Stack
 			spacing={3}
-			flexBasis="40%"
+			sx={{
+				maxWidth: { xs: '100%', xl: '40%' },
+				minWidth: { xs: '100%', xl: '680px' }
+			}}
 		>
 			<Stack>
-				<TypographyTitleAccent>Liquidity Management</TypographyTitleAccent>
-				<TypographyTitleWhite>Solutions</TypographyTitleWhite>
+				<TypographyTitleWhite>
+					<TypographyTitleAccent sx={{ display: 'inline-flex' }}>Liquidity Management&nbsp;</TypographyTitleAccent>
+					Solutions
+				</TypographyTitleWhite>
 			</Stack>
 			<TypographySubtitleWhite>
 				With our Liquidity Management Solutions, your users can instantly convert crypto to fiat or fiat to

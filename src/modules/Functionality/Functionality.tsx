@@ -27,7 +27,7 @@ export const Functionality = memo(() => {
 					</Typography>
 				</Typography>
 				<Stack
-					direction="row"
+					direction={{ xs: 'column', lg: 'row' }}
 					sx={{ gap: 3, flexGrow: 1 }}
 				>
 					<FunctionalityCard

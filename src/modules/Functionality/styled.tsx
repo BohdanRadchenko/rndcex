@@ -16,13 +16,16 @@ export const ContentWrapper = styled('div')({
 	gridTemplateColumns: 'repeat(2, 1fr)',
 });
 
-export const BackgroundHolderStyle = styled(Box)({
+export const BackgroundHolderStyle = styled(Box)(({ theme }) => ({
 	position: 'absolute',
 	right: 0,
 	bottom: 0,
 	left: 0,
 	paddingRight: 50,
-});
+	[theme.breakpoints.down('xl')]: {
+		display: 'none',
+	},
+}));
 
 export const BackgroundImageWrapperStyle = styled(
 	({ ...props }: StackProps) => <Stack

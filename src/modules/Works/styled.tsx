@@ -12,10 +12,13 @@ export const CardTitleStyled = styled(Typography)(({ theme: { palette: { typogra
 	fontSize: 30,
 }));
 
-export const BackgroundImageStyled = styled('img')({
+export const BackgroundImageStyled = styled('img')(({ theme }) => ({
 	position: 'absolute',
 	bottom: 50,
 	right: 0,
-	// zIndex: 0,
 	zIndex: -1,
-});
+	display: 'none',
+	[theme.breakpoints.up('xxl')]: {
+		display: 'block',
+	},
+}));

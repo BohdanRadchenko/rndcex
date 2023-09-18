@@ -21,9 +21,17 @@ export const Security = memo(() => {
 					maxWidth={1420}
 				>
 					<TypographyTitleWhite>
-						<TypographyTitleAccent>Security&nbsp;</TypographyTitleAccent>
+						<TypographyTitleAccent
+							sx={{
+								display: 'inline-block',
+								width: 'auto'
+							}}
+						>
+							Security&nbsp;
+						</TypographyTitleAccent>
 						Features
 					</TypographyTitleWhite>
+
 					<TypographySubtitleWhite>
 						At RND CEX, we prioritize providing all the necessary tools for verifying and monitoring users to ensure
 						your security, and the security of your clients' digital assets.

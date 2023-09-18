@@ -11,14 +11,18 @@ export const Management = memo(() => {
 			backgroundComponent={BackgroundProductsSection}
 		>
 			<Stack
-				spacing={5}
 				flexGrow={1}
 				pt={8}
 				pb={5}
 				direction="row"
 			>
-				<ManagementTitle/>
-				<ManagementCard/>
+				<Stack
+					direction={{ xs: 'column', xl: 'row' }}
+					spacing={5}
+				>
+					<ManagementTitle/>
+					<ManagementCard/>
+				</Stack>
 			</Stack>
 		</LayoutLogo>
 	);

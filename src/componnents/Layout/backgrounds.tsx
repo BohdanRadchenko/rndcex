@@ -20,6 +20,9 @@ export const BaseBackground = styled('div')(({ theme: { extendPalette } }) => ({
 	left: 0,
 	zIndex: 0,
 	backgroundColor: '#000',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat',
+	backgroundPosition: 'center',
 	backgroundImage: `linear-gradient(318.17deg, ${extendPalette.brown75} 14.17%, ${extendPalette.dark100} 114%)`,
 }));
 

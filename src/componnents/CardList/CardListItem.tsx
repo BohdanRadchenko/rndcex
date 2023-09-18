@@ -9,19 +9,9 @@ export const CardListItem: FC<ICardListItemProps> = memo(({ children }) => {
 		return (
 			<Card
 				sx={{
-					// flexShrink: 0,
-					// flexGrow: 1,
-					// flexBasis: 'min-content',
-					// flex: '1 0 auto',
-					// flex: 0,
-					// flexGrow: 1,
-					// width: 'auto'
-					// flex: '1 2 min-content',
+					p: { xs: 2, lg: 3 },
+					flex: '1 1 auto',
 					minWidth: 'min-content',
-					// minWidth: '305px',
-					// flexGrow: 1,
-					// flexBasis: 1,
-					// flexShrink: 1,
 				}}
 			>
 				{children}

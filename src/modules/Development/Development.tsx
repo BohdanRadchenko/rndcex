@@ -9,62 +9,68 @@ import { memo } from 'react';
 export const Development = memo(() => {
 	return (
 		<LayoutLogo>
-			<Typography
-				variant="title"
-				sx={{ mb: 3 }}
+			<Stack
+				pt={10.4}
+				pb={7.5}
 			>
 				<Typography
 					variant="title"
-					color="orange"
-					component="span"
-					sx={({ palette: { typography } }) => ({ color: typography.orange })}
+					sx={{ mb: 3 }}
 				>
-					Our&nbsp;
+					<Typography
+						variant="title"
+						color="orange"
+						component="span"
+						sx={({ palette: { typography } }) => ({ color: typography.orange })}
+					>
+						Our&nbsp;
+					</Typography>
+					Technology Stack for Crypto
+					Exchange Development
 				</Typography>
-				Technology Stack for Crypto
-				Exchange Development
-			</Typography>
-			<Typography
-				variant="subtitle"
-				sx={{ mb: 5 }}
-			>
-				We at R’N’D CEX use upgraded and new-fangled technologies for developing and designing the whitelabel
-				crypto exchange software.
-			</Typography>
-			<CardList list={developmentList}>
-				{({ title, icons }) => {
-					return (
-						<Stack
-							spacing={3}
-							sx={{ p: 2 }}
-						>
-							<BorderGradient space={1.5}>
-								<Typography
-									variant="body1"
-									component="pre"
-									fontSize={26}
-								>
-									{title}
-								</Typography>
-							</BorderGradient>
+				<Typography
+					variant="subtitle"
+					sx={{ mb: 5 }}
+				>
+					We at R’N’D CEX use upgraded and new-fangled technologies for developing and designing the whitelabel
+					crypto exchange software.
+				</Typography>
+				<CardList list={developmentList}>
+					{({ title, icons }) => {
+						return (
 							<Stack
-								direction="row"
-								gap={3}
-								alignItems="center"
-								justifyContent="center"
+								spacing={3}
+								padding={{ xs: 0, lg: 2 }}
+								// sx={{ p: 2 }}
 							>
-								{icons.map(({ name, icon }, index) => (
-									<DevelopmentCardIcon
-										key={`${index}-${name}`}
-										name={name}
-										icon={icon}
-									/>
-								))}
+								<BorderGradient space={1.5}>
+									<Typography
+										variant="body1"
+										component="pre"
+										fontSize={26}
+									>
+										{title}
+									</Typography>
+								</BorderGradient>
+								<Stack
+									direction="row"
+									gap={{ xs: 1, lg: 3 }}
+									alignItems="center"
+									justifyContent="center"
+								>
+									{icons.map(({ name, icon }, index) => (
+										<DevelopmentCardIcon
+											key={`${index}-${name}`}
+											name={name}
+											icon={icon}
+										/>
+									))}
+								</Stack>
 							</Stack>
-						</Stack>
-					);
-				}}
-			</CardList>
+						);
+					}}
+				</CardList>
+			</Stack>
 		</LayoutLogo>
 	);
 });

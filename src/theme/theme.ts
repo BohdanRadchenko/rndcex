@@ -53,6 +53,15 @@ declare module '@mui/material/styles' {
 	interface SimplePaletteColorOptions {
 		typography?: Partial<ITypographyColors>;
 	}
+
+	interface BreakpointOverrides {
+		xs: true;
+		sm: true;
+		md: true;
+		lg: true;
+		xl: true;
+		xxl: true;
+	}
 }
 
 declare module '@mui/material/Typography' {
@@ -66,7 +75,7 @@ declare module '@mui/material/Typography' {
 	}
 }
 
-const theme = createTheme({
+const theme = createTheme(theme, {
 	extendPalette,
 	palette: {
 		...extendPalette,
@@ -98,7 +107,7 @@ const theme = createTheme({
 		title: {
 			fontFamily: 'Tera',
 			fontSize: 80,
-			fontWeight: 700,
+			fontWeight: 700
 		},
 		title2: {
 			fontFamily: 'Tera',
@@ -125,6 +134,16 @@ const theme = createTheme({
 			fontSize: 18,
 			fontWeight: 400,
 		}
+	},
+	breakpoints: {
+		values: {
+			xs: 0,
+			sm: 600,
+			md: 900,
+			lg: 1200,
+			xl: 1536,
+			xxl: 1920,
+		},
 	},
 } as ThemeOptions);
 
