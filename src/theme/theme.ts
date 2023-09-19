@@ -75,7 +75,7 @@ declare module '@mui/material/Typography' {
 	}
 }
 
-const theme = createTheme(theme, {
+const theme = createTheme({
 	extendPalette,
 	palette: {
 		...extendPalette,

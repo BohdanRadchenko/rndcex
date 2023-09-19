@@ -15,15 +15,15 @@ export const ProductsContent = memo(() => {
 			<Stack
 				flexWrap="wrap"
 				direction="row"
-				width="78.92%"
 				justifyContent="space-between"
 				gap={5}
+				sx={{ width: { xs: '100%', xxl: '78.92%' } }}
 			>
 				{productContentData.map(({ title, subtitle, features }) => (
 					<Stack
-						flexBasis="48%"
 						spacing={1.6}
 						key={title}
+						sx={{ flexBasis: { xs: '100%', xl: '48%' } }}
 					>
 						<BorderGradient space={1.6}>
 							<CardTitleStyled>

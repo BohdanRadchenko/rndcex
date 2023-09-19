@@ -3,11 +3,6 @@ import { ReactComponent as ModulusIcon } from '@/icons/ModulusIcon.svg';
 import { ReactComponent as RndIcon } from '@/icons/RndIcon.svg';
 import { ReactComponent as SoftFxIcon } from '@/icons/SoftFxIcon.svg';
 
-console.log('RndIcon', RndIcon);
-console.log('B2BBrokerIcon', B2BBrokerIcon);
-console.log('ModulusIcon', ModulusIcon);
-console.log('SoftFxIcon', SoftFxIcon);
-
 type TableValue = Record<[k: string], string>;
 
 type TableHead = { key: string, label: string };
